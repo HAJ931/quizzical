@@ -11,7 +11,7 @@ export default function App() {
                 <h5 className="main--subtitle">
                     A fun quiz app to test your trivia skills!
                 </h5>
-                <Link to="/settings">
+                <Link to="/game">
                     <button className="main--button">
                         Start Game
                     </button>
