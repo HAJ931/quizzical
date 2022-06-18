@@ -47,6 +47,11 @@ main {
     background-color: #4D5B9E;
 }
 
+.main--button:hover {
+    cursor: pointer;
+    background-color: #394375;
+}
+
 footer {
     position: absolute;
     width: 100%;
