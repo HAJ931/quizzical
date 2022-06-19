@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 import "./Game.css"
+import Ques from "../components/Ques"
 
 export default function Game() {
 
@@ -28,20 +29,18 @@ export default function Game() {
         return txt.value;
     }
     const entities = { "&amp;": "&", '&#039;': "'", '&quot;': '"', '&lt;': "<", '&gt;': ">" } 
-    const questionElements = quizQues.map( ques =>
-        <div>
-            <div>
-                {decodeHtml(ques.question).replace(/&#?\w+;/, match => entities[match])}
-            </div>
-            <ul>
-                {ques.answers.map(ans => <li>{decodeHtml(ans.value)}</li>)}
-            </ul>
-        </div>
+    const questionElements = quizQues.map( (ques, index) =>
+        <Ques 
+            key={index} 
+            question={decodeHtml(ques.question).replace(/&#?\w+;/, match => entities[match])} 
+            answers={ques.answers.map(ans=>({value: decodeHtml(ans.value), is_correct: ans.is_correct}))}
+        />
     )
 
     return(
         <div className="game">
             { questionElements }
+        <button className="game--button">Check Answers</button>
         </div>
     )
 }
