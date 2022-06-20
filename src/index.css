@@ -3,6 +3,9 @@
 }
 
 body {
+    background-image: url('../public/quizzical-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     font-family: 'Inter', sans-serif;
 } 
 
@@ -32,7 +35,7 @@ main {
     font-size: 20px;
 }
 
-.main--button, .game--button {
+.main--button, .game--button, .game--reset {
     margin: 10px;
     padding: 10px;
     font-family: 'Inter', sans-serif;
@@ -40,20 +43,23 @@ main {
     font-size: 16px;
     color: white;
     width: 196px;
-    margin-left: auto;
-    margin-right: auto;
     border: 0;
     border-radius: 10px;
     background-color: #4D5B9E;
 }
 
-.main--button:hover {
+.main--button, .game--button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main--button:hover, .game--button:hover, .game--reset:hover {
     cursor: pointer;
     background-color: #394375;
 }
 
 footer {
-    position: absolute;
+    position: relative;
     width: 100%;
     padding: 10px;
     left: 0;
