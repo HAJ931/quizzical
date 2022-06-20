@@ -7,7 +7,7 @@ import App from "./App"
 import Game from "./pages/Game"
 
 const routing = (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <Routes>
             <Route exact path="/" element={<App />} />
             <Route exact path="/game" element={<Game />} />
