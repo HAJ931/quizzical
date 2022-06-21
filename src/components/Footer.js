@@ -3,10 +3,10 @@ import React from "react"
 
 export default function Footer() {
     return(
-        <footer>
+        <div className="footer">
             <h1 className="footer--content">    
                 Made with 💜 by Hanan Abdul Jaleel
             </h1>
-        </footer>
+        </div>
     )
 }
